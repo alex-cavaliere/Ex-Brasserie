@@ -17,6 +17,20 @@ body{
     margin: 0;
     margin: auto;
 }
+a{
+    display: inline-block;
+    border-radius: 20px;
+    margin: 0.5rem;
+    width: 10px;
+    height: 10px;
+    background-color: var(--btn);
+    text-decoration: none;
+}
+a:hover{
+    transform: scale(1.2);
+    transition: transform 100ms ease-in;
+    cursor: pointer;
+}
 ul{
     margin-right: 2rem;
     width: 200px;

@@ -1,4 +1,4 @@
-const BEERS = ["Stout", "IPA", "Ambré"]; // genere erreur de merge
+const BEERS = ["Pale Ale", "Triple", "Saison"]; // genere erreur de merge
 console.log("BEERS:", BEERS);
 
 // Dark/Light theme
