@@ -1,14 +1,20 @@
+html {
+  scroll-behavior: smooth;
+}
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: beige;
-    background-color: #8d0909;
+    background-color: var(--btn);
 }
 header h1{
     margin-left: 2rem;
 }
 body{
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
     margin: auto;
 }
 ul{
@@ -24,10 +30,14 @@ li:hover{
     cursor: pointer;
 }
 #banniere img{
-    width: 100%;
+    min-width: 100%;
     object-fit: cover;
     height: 300px;
 }
+#banniere img:nth-child(3){
+    object-position: 0 -5rem;
+}
+
 section{
     width: 70%;
     margin: auto;
@@ -36,19 +46,27 @@ section{
     min-height: 180px;
 }
 #banniere{
+    height: 300px;
     margin: auto;
     padding: 2rem;
+}
+#slides{
+    overflow: hidden;
+    display: flex;
+}
+#slides-cmd{
+    text-align: center;
 }
 footer{
     display: flex;
     flex-direction: column;
     align-items: center;
     color: beige;
-    background-color: #8d0909;
+    background-color: var(--btn);
 }
 footer button {
     font-weight: bold;
-    color: #8d0909;
+    color: var(--btn);
     margin-bottom: 1rem;
     padding: 0.5rem;
     border-radius: 2rem;
@@ -57,4 +75,27 @@ footer button:hover{
     transform: scale(1.1);
     transition: transform 100ms ease-in;
     cursor: pointer;
+}
+ 
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(300px);
+  transition: 0.5s;
+}
+ 
+.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+ 
+:root[data-theme="light"] {
+  --bg: #fdf6ec;
+  --text: #2b2b2b;
+  --btn: #8d0909;
+}
+
+:root[data-theme="dark"] {
+  --bg: #1e1e1e;
+  --text: #f2f2f2;
+  --btn: #510d0d;
 }
