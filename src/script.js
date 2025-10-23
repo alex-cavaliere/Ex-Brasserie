@@ -1,4 +1,4 @@
-const BEERS = ["Stout", "IPA", "Blonde"];
+const BEERS = ["Stout", "IPA", "Ambré"]; // genere erreur de merge
 console.log("BEERS:", BEERS);
 
 
