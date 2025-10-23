@@ -2,28 +2,59 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: beige;
+    background-color: #8d0909;
+}
+header h1{
+    margin-left: 2rem;
 }
 body{
-    width: 80%;
     margin: auto;
 }
 ul{
+    margin-right: 2rem;
     width: 200px;
     display: flex;
     list-style-type: none;
     justify-content: space-between;
+}
+li:hover{
+    transform: scale(1.1);
+    transition: transform 100ms ease-in;
+    cursor: pointer;
 }
 #banniere img{
     width: 100%;
     object-fit: cover;
     height: 300px;
 }
+section{
+    width: 70%;
+    margin: auto;
+}
+#main-page{
+    min-height: 180px;
+}
 #banniere{
-    margin: 2rem 0 2rem 0;
+    margin: auto;
+    padding: 2rem;
 }
 footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2rem;
+    color: beige;
+    background-color: #8d0909;
+}
+footer button {
+    font-weight: bold;
+    color: #8d0909;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
+footer button:hover{
+    transform: scale(1.1);
+    transition: transform 100ms ease-in;
+    cursor: pointer;
 }
