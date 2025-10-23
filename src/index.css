@@ -1,0 +1,29 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body{
+    width: 80%;
+    margin: auto;
+}
+ul{
+    width: 200px;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+#banniere img{
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+}
+#banniere{
+    margin: 2rem 0 2rem 0;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
