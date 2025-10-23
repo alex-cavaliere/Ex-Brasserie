@@ -1,7 +1,7 @@
 const BEERS = ["Stout", "IPA", "Blonde"];
 console.log("BEERS:", BEERS);
 
-
+// Dark/Light theme
 (() => {
   const btn = document.querySelector("#toggle-theme");
   if (!btn) return;
@@ -18,13 +18,27 @@ console.log("BEERS:", BEERS);
   });
 })();
 
+// défilement vers sections
 (() => {
   const links = document.querySelectorAll('a[href^="#"]');
   links.forEach(link => {
-    link.addEventListener("click", (e) => {
+    link.addEventListener("click", e => {
       e.preventDefault();
       const target = document.querySelector(link.getAttribute("href"));
       if (target) target.scrollIntoView({ behavior: "smooth" });
     });
   });
+})();
+
+// animation d'apparition 
+(() => {
+  const items = document.querySelectorAll("[data-reveal]");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+      }
+    });
+  });
+  items.forEach(el => observer.observe(el));
 })();
